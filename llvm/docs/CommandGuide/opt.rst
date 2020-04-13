@@ -30,8 +30,8 @@ that have been loaded with the :option:`-load` option.  Use the :option:`-help`
 option to determine what optimizations you can use.
 
 If ``filename`` is omitted from the command line or is "``-``", :program:`opt`
-reads its input from standard input.  Inputs can be in either the LLVM assembly
-language format (``.ll``) or the LLVM bitcode format (``.bc``).
+reads its input from standard input.  Inputs can either be in LLVM assembly
+language format (``.ll``) or in LLVM bitcode format (``.bc``).
 
 If an output filename is not specified with the :option:`-o` option,
 :program:`opt` writes its output to the standard output.
@@ -61,7 +61,7 @@ OPTIONS
 
  :program:`opt` provides the ability to run any of LLVM's optimization or
  analysis passes in any order.  The :option:`-help` option lists all the passes
- available.  The order in which the options occur on the command line are the
+ available.  The order in which the options occur on the command line is the
  order in which they are executed (within pass constraints).
 
 .. option:: -disable-inlining
