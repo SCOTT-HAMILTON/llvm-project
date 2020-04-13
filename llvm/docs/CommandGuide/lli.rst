@@ -45,7 +45,7 @@ GENERAL OPTIONS
 
 .. option:: -load=pluginfilename
 
- Causes :program:`lli` to load the plugin (shared object) named *pluginfilename* and use
+ Cause :program:`lli` to load the plugin (shared object) named *pluginfilename* and use
  it for optimization.
 
 .. option:: -stats
@@ -83,14 +83,20 @@ TARGET OPTIONS
  Specify a specific chip in the current architecture to generate code for.
  By default this is inferred from the target triple and autodetected to
  the current architecture.  For a list of available CPUs, use:
- **llvm-as < /dev/null | llc -march=xyz -mcpu=help**
+ 
+ .. code-block:: none
 
+   llvm-as < /dev/null | llc -march=xyz -mcpu=help
+   
 .. option:: -mattr=a1,+a2,-a3,...
 
  Override or control specific attributes of the target, such as whether SIMD
  operations are enabled or not.  The default set of attributes is set by the
  current CPU.  For a list of available attributes, use:
- **llvm-as < /dev/null | llc -march=xyz -mattr=help**
+ 
+ .. code-block:: none
+
+ llvm-as < /dev/null | llc -march=xyz -mattr=help
 
 FLOATING POINT OPTIONS
 ----------------------
@@ -109,12 +115,12 @@ FLOATING POINT OPTIONS
 
 .. option:: -enable-unsafe-fp-math
 
- Causes :program:`lli` to enable optimizations that may decrease floating point
+ Cause :program:`lli` to enable optimizations that may decrease floating point
  precision.
 
 .. option:: -soft-float
 
- Causes :program:`lli` to generate software floating point library calls instead of
+ Cause :program:`lli` to generate software floating point library calls instead of
  equivalent hardware instructions.
 
 CODE GENERATION OPTIONS
@@ -174,7 +180,8 @@ CODE GENERATION OPTIONS
  .. code-block:: text
 
       =bigblock: Big-block register allocator
-      =linearscan: linear scan register allocator =local -   local register allocator
+      =linearscan: linear scan register allocator 
+      =local: local register allocator
       =simple: simple register allocator
 
 .. option:: -relocation-model=model
@@ -184,7 +191,8 @@ CODE GENERATION OPTIONS
  .. code-block:: text
 
       =default: Target default relocation model
-      =static: Non-relocatable code =pic -   Fully relocatable, position independent code
+      =static: Non-relocatable code 
+      =pic:   Fully relocatable, position independent code
       =dynamic-no-pic: Relocatable external references, non-relocatable code
 
 .. option:: -spiller
