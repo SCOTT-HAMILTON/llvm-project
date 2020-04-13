@@ -216,7 +216,7 @@ OPTIONS
 .. option:: -topn=n
 
  Instruct the profile dumper to show the top ``n`` functions with the
- hottest basic blocks in the summary section. By default, the topn functions
+ hottest basic blocks in the summary section. By default, the top n functions
  are not dumped.
 
 .. option:: -sample
@@ -229,12 +229,12 @@ OPTIONS
 
 .. option:: -value-cutoff=n
 
- Show only those functions whose max count values are greater or equal to ``n``.
+ Show only those functions whose max count value is greater or equal to ``n``.
  By default, the value-cutoff is set to 0.
 
 .. option:: -list-below-cutoff
 
- Only output names of functions whose max count value are below the cutoff
+ Only output names of functions whose max count value is below the cutoff
  value.
 
 .. option:: -showcs
@@ -299,7 +299,7 @@ OPTIONS
 
 .. option:: -value-cutoff=n
 
- Show only those functions whose max count values are greater or equal to ``n``.
+ Show only those functions whose max count value is greater or equal to ``n``.
  By default, the value-cutoff is set to max of unsigned long long.
 
 .. option:: -cs
